@@ -14,20 +14,17 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-
   @override
   void initState() {
     super.initState();
 
-      Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const Loginscreen()),
       );
     });
-
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +41,10 @@ class _SplashScreenState extends State<SplashScreen>
               height: screenheight * 0.25,
               fit: BoxFit.contain,
             ),
-            SizedBox(height: screenheight * 0.02), 
+            SizedBox(height: screenheight * 0.02),
             DefaultTextStyle(
               style: GoogleFonts.lato(
-                fontSize: screenwidth*0.07,
+                fontSize: screenwidth * 0.07,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -61,10 +58,12 @@ class _SplashScreenState extends State<SplashScreen>
                 totalRepeatCount: 1,
               ),
             ),
-            SizedBox(height: screenheight*0.01,),
+            SizedBox(
+              height: screenheight * 0.01,
+            ),
             DefaultTextStyle(
               style: GoogleFonts.archivoNarrow(
-                fontSize: screenwidth*0.055,
+                fontSize: screenwidth * 0.055,
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
@@ -78,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen>
                 totalRepeatCount: 1,
               ),
             ),
-           ],          
+          ],
         ),
       ),
     );
